@@ -3,7 +3,7 @@
 import { useRef, useState, useEffect } from "react";
 import BandIdentity from "../BandIdentity/BandIdentity";
 import Container from "@/app/global-components/Container/Container";
-import IntroTourDates from "../IntroTourDates/IntroTourDates";
+import IntroPage from "../IntroPage/IntroPage";
 import NewAlbum from "../NewAlbum/NewAlbum";
 import BackToTop from "../BackToTop/BackToTop";
 import { useInView } from "framer-motion";
@@ -44,7 +44,7 @@ export default function Intro() {
 					poster="/frame-band.jpg"
 					className="object-cover w-full h-full z-10"
 					playsInline>
-					<source src="./video-band.webm" type="video/webm" />
+					<source src="./video-band.mp4" type="video/mp4" />
 					<source src="./video-band.mp4" type="video/mp4" />
 					<p>
 						Your browser doesn&#8217;t support HTML video. Here is a
@@ -53,7 +53,7 @@ export default function Intro() {
 				</video>
 			</div>
 			<Container customClasses="flex flex-col justify-center items-center absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 lg:justify-end lg:items-end">
-				<IntroTourDates />
+				<IntroPage />
 			</Container>
 			<NewAlbum customClasses="mt-auto z-50 lg:hidden" />
 			<BackToTop customClasses={`reveal${isScrollTopVisible ? " visible" : ""}`} />

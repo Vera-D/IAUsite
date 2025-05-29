@@ -8,7 +8,6 @@ module.exports = {
 	theme: {
 		extend: {
 			backgroundImage: {
-				"album-cover": "url('/panic-panini-album.jpg')",
 				"incoming-shows": "url('/coming-shows-bg.jpg')",
 				"hero-pattern": "url('/pattern.png')",
 			},
@@ -18,9 +17,9 @@ module.exports = {
 				rockSalt: ["Rock Salt", "sans-serif"],
 			},
 			colors: {
-				"fluo-green": "#43ffb6",
+				"fluo-green": "#805ad5",
 				"yellow-btn-primary": "#ffc621",
-				"medium-gray": "#bebebe",
+				"medium-gray": "#D3D3D3",
 			},
 			boxShadow: {
 				"centered-shadow": "0px 0px 19px 4px rgba(0,0,0,0.1)",

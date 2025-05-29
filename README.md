@@ -19,6 +19,8 @@ https://github.com/stefanogali/panic-panini-next.git
 then install the dependencies with
 
 ```bash
+nvm install node --latest-npm
+
 npm install
 ```
 
@@ -37,3 +39,8 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
 
 Please feel free to use/modify any parts of the code as you wish.
+
+Find things
+```bash
+grep -rl "frame-band" .
+```
