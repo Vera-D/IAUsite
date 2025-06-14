@@ -13,13 +13,13 @@ export default function ContactUs() {
 	return (
 		<section
 			id="contacts"
-			className={`relative flex flex-col-reverse items-center w-full mt-16 mx-auto max-w-[150rem] lg:mt-56 lg:flex-row`}>
+			className="relative flex flex-col-reverse items-center w-full mt-16 mx-auto max-w-[150rem] lg:mt-56 lg:flex-row text-fluo-green">
 			<Image
 				className="mt-5 max-h-96 object-cover lg:mt-0 lg:max-h-none lg:max-w-lg lg:block xl:max-w-xl"
 				src="/contacts.jpg"
 				width={750}
 				height={533}
-				alt="Band playing"
+				alt="Dancing"
 			/>
 			<Container customClasses="flex flex-col overflow-hidden lg:items-end lg:justify-end lg:absolute lg:left-1/2 lg:-translate-x-1/2">
 				<div
@@ -40,19 +40,18 @@ export default function ContactUs() {
 							</h2>
 						</div>
 						<p>
-							And get us a drink in case you around. <br></br>Email us at{" "}
+							Let's become one. <br></br>Email us at{" "}
 							<a
 								className="text-yellow-btn-primary underline underline-offset-4 hover:text-yellow-600"
 								href="https://www.paninopanini.co.uk/"
 								target="_blank"
 								rel="noreferrer">
 								{" "}
-								hello@panicpanini.com{" "}
+								ITSABOUTUS@PM.ME{" "}
 							</a>{" "}
-							or fill the form below.
 						</p>
 					</div>
-					<ContactForm />
+					{/* <ContactForm />*/}
 				</div>
 			</Container>
 		</section>

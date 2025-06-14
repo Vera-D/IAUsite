@@ -24,7 +24,7 @@ const Slide = ({ left, progress, direction }) => {
 const Phrase = () => {
 	return (
 		<div>
-			<p className="text-[5rem] leading-none overflow-hidden uppercase font-bold">Panic Panini -</p>
+			<p className="text-[5rem] leading-none overflow-hidden uppercase font-bold text-fluo-green">IT'S ABOUT US! -</p>
 		</div>
 	);
 };
@@ -41,7 +41,7 @@ export default function TextParallax() {
 
 	return (
 		<section
-			className="overflow-hidden mt-16 lg:mt-56"
+			className="overflow-hidden mt-16 lg:mt-56 pb-24"
 			style={{
 				transform: isInView ? "none" : "translateY(50px)",
 				opacity: isInView ? 1 : 0,

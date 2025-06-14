@@ -6,7 +6,7 @@ export default function NewAlbum({ customClasses }) {
 	const isInView = useInView(comingSoonRef, { once: true });
 	return (
 		<div
-			className={`flex flex-col items-center justify-center p-4 pb-8${
+			className={`flex flex-col items-center justify-center p-4 pb-24 pt-16${
 				customClasses ? ` ${customClasses}` : ""
 			}`}
 			ref={comingSoonRef}
@@ -15,9 +15,10 @@ export default function NewAlbum({ customClasses }) {
 				opacity: isInView ? 1 : 0,
 				transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
 			}}>
-			<h4 className="text-white font-permanentMarker text-xl">New Music</h4>
-			<h4 className="text-white font-rockSalt text-xl">We Make Art!</h4>
-			<p className="text-fluo-green text-base">Battle Cry!</p>
+			<h4 className="text-white font-rockSalt text-xl">Battle Cry!</h4>
+			<h4 className="text-white font-rockSalt text-xl">Mana Mana</h4>
+			<h4 className="text-white font-rockSalt text-xl">Alone/Forever/For Good</h4>
+			<p className="text-fluo-green text-base">It's About Us!</p>
 		</div>
 	);
 }

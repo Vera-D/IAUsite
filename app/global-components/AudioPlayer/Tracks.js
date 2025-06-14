@@ -1,17 +1,17 @@
 export const tracks = [
 	{
-		title: "Green Daze",
-		src: "./mp3-songs/green-daze.mp3",
-		author: "Your Bandmate",
+		title: "Battle Cry",
+		src: "./mp3-songs/01.IAU-BATTLE-CRY.wav",
+		author: "IAU",
 	},
 	{
-		title: "Periscope",
-		src: "./mp3-songs/periscope.mp3",
-		author: "Cool Band Superstars",
+		title: "MANA MANA",
+		src: "./mp3-songs/02.IAU-MANA-MANA.wav",
+		author: "IAU",
 	},
 	{
 		title: "Whats It To Ya Punk",
-		src: "./mp3-songs/what-is-to-ya-punk.mp3",
-		author: "The Brownies",
+		src: "./mp3-songs/03.IAU-ME-ALONE.wav",
+		author: "IAU",
 	},
 ];

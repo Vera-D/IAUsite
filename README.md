@@ -44,3 +44,10 @@ Find things
 ```bash
 grep -rl "frame-band" .
 ```
+Edit the audio files
+
+ffmpeg -i /home/vera/code/panic-panini-next/public/mp3-songs/01.IAU-BATTLE-CRY.wav -codec:a libmp3lame -b:a 192k 01.IAU-BATTLE-CRY.mp3
+
+ffmpeg -i /home/vera/code/panic-panini-next/public/mp3-songs/02.IAU-MANA-MANA.wav -codec:a libmp3lame -b:a 192k 02.IAU-MANA-MANA.mp3
+
+ffmpeg -i /home/vera/code/panic-panini-next/public/mp3-songs/03.IAU-ME-ALONE.wav -codec:a libmp3lame -b:a 192k 03.IAU-ME-ALONE.mp3

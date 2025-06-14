@@ -26,7 +26,8 @@ export default function AudioPlayer() {
 	};
 
 	return (
-		<div className="relative w-full max-w-[135rem] my-auto bg-fluo-green rounded-xl border-solid border-4 border-white shadow-centered-shadow p-5 pt-28 ">
+		<div className="relative w-full max-w-[135rem] my-auto bg-transparent rounded-xl border-solid border-4 border-fluo-green p-5 pt-12 ">
+
 			<Controls audioRef={audioRef} progressBarRef={progressBarRef} setTimeProgress={setTimeProgress} duration={duration} tracks={tracks} trackIndex={trackIndex} setTrackIndex={setTrackIndex} setCurrentTrack={setCurrentTrack} handleNext={handleNext} />
 			<DisplayTrack currentTrack={currentTrack} audioRef={audioRef} progressBarRef={progressBarRef} setDuration={setDuration} handleNext={handleNext} trackIndex={trackIndex} />
 			<ProgressBar progressBarRef={progressBarRef} audioRef={audioRef} timeProgress={timeProgress} duration={duration} />
