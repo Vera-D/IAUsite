@@ -44,7 +44,7 @@ export default function Intro() {
 					muted
 					loop
 					poster="/frame-band.jpg"
-					className="object-cover w-full h-full z-10"
+					className="object-cover w-full h-full z-10 video-pan-right"
 					playsInline>
 					<source src="./video-band.mp4" type="video/mp4" />
 					<source src="./video-band.mp4" type="video/mp4" />
@@ -56,16 +56,7 @@ export default function Intro() {
 			</div>
 			<Container customClasses="flex flex-col justify-center items-center absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 lg:justify-end lg:items-end">
 				<IntroPage />
-				<ScrollTo toId="about" duration={1200}>
-					<ButtonPrimary customClasses="mt-8 animate-bounce" >
-						<span className="flex items-center gap-2">
-							Scroll Down
-							<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6">
-								<path strokeLinecap="round" strokeLinejoin="round" d="M19.5 12.75L12 20.25L4.5 12.75M12 19.5V4.5" />
-							</svg>
-						</span>
-					</ButtonPrimary>
-				</ScrollTo>
+				
 			</Container>
 			<NewAlbum customClasses="mt-auto z-50 lg:hidden" />
 			<BackToTop customClasses={`reveal${isScrollTopVisible ? " visible" : ""}`} />

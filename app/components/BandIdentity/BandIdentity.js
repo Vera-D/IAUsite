@@ -13,9 +13,6 @@ export default function BandIdentity() {
 			<div className="w-full py-3 z-50 lg:hidden">
 				<Container customClasses="px-2.5 flex items-center justify-between font-sm">
 					<Image className="max-w-[6rem] h-auto " src="/logo-portrait.png" width={324} height={236} alt="Panic Panini logo" />
-					<ScrollTo toId="shows" duration={1500}>
-						<ButtonPrimary customClasses="text-sm">Live gigs</ButtonPrimary>
-					</ScrollTo>
 				</Container>
 			</div>
 			

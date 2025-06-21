@@ -33,15 +33,16 @@ export default function About() {
 
 					<p className="text-xl font-semibold pb-4">
 						We are{" "}
-						<span className="text-yellow-btn-primary">It's About Us</span> straight edge/d.i.y./synthwave/darkwave/hardcore
+						<span className="text-yellow-btn-primary">IT'S ABOUT US (IAU)</span>, a duo that oozes darwave, emo, straight edge, d.i.y., synthwave, hardcore, darkwave, synthpop.
 					</p>
 					<p className="pb-4">
-						<span className="font-bold">from the streets of California/LA/South Central + Finland/Tampere/Tesoma </span> 
-					
-						
+						<span className="font-bold">She's from the grimy streets of South Central Los Angeles, CALIFORNIA. He's from Tesoma, Tampere, FINLAND </span> 
 					</p>
 					<p className="italic text-yellow-btn-primary pb-8">
-						Darkwave. Synthpop. Two worlds one pulse. IAU!
+						Two worlds, one pulse. 
+						
+						IAU!
+						
 					</p>
 					
 				</div>

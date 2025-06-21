@@ -1,4 +1,6 @@
 "use client";
+import ScrollTo from "@/app/global-components/ScrollTo/ScrollTo";
+import ButtonPrimary from "@/app/global-components/ButtonPrimary/ButtonPrimary";
 
 import Image from "next/image";
 import { useRef, useState } from "react";
@@ -26,11 +28,16 @@ export default function AudioPlayer() {
 	};
 
 	return (
-		<div className="relative w-full max-w-[135rem] my-auto bg-transparent rounded-xl border-solid border-4 border-fluo-green p-5 pt-12 ">
-
-			<Controls audioRef={audioRef} progressBarRef={progressBarRef} setTimeProgress={setTimeProgress} duration={duration} tracks={tracks} trackIndex={trackIndex} setTrackIndex={setTrackIndex} setCurrentTrack={setCurrentTrack} handleNext={handleNext} />
-			<DisplayTrack currentTrack={currentTrack} audioRef={audioRef} progressBarRef={progressBarRef} setDuration={setDuration} handleNext={handleNext} trackIndex={trackIndex} />
-			<ProgressBar progressBarRef={progressBarRef} audioRef={audioRef} timeProgress={timeProgress} duration={duration} />
-		</div>
-	);
+ 
+        <div className="relative w-full max-w-[135rem] my-auto bg-transparent rounded-xl border-solid border-4 border-fluo-green p-5 ">
+            <ScrollTo toId="about" duration={1200}>
+                <ButtonPrimary customClasses="mb-4">
+                    It's About Us!
+                </ButtonPrimary>
+            </ScrollTo>
+            <Controls audioRef={audioRef} progressBarRef={progressBarRef} setTimeProgress={setTimeProgress} duration={duration} tracks={tracks} trackIndex={trackIndex} setTrackIndex={setTrackIndex} setCurrentTrack={setCurrentTrack} handleNext={handleNext} />
+            <DisplayTrack currentTrack={currentTrack} audioRef={audioRef} progressBarRef={progressBarRef} setDuration={setDuration} handleNext={handleNext} trackIndex={trackIndex} />
+            <ProgressBar progressBarRef={progressBarRef} audioRef={audioRef} timeProgress={timeProgress} duration={duration} />
+        </div>
+    );
 }
