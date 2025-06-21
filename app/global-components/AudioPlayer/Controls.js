@@ -38,7 +38,7 @@ export default function Controls({ audioRef, progressBarRef, duration, setTimePr
 
 	return (
 		<div className="flex items-center pt-8 pb-4 gap-8">
-			<button onClick={togglePlayPause} className="bg-fluo-green hover:bg-white transition-all rounded-full p-3 shadow-lg">
+			<button onClick={togglePlayPause} className="bg-fluo-green hover:bg-yellow-btn-primary transition-all rounded-full p-3 shadow-lg animate-bounce">
 				{isPlaying ? <Pause extraClasses="fill-yellow-btn-primary w-8 h-8" /> : <Play extraClasses="fill-yellow-btn-primary w-8 h-8" />}
 			</button>
 			{/* <button
