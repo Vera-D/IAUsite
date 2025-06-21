@@ -1,17 +1,17 @@
 export const tracks = [
 	{
 		title: "Battle Cry",
-		src: "./mp3-songs/01.IAU-BATTLE-CRY.wav",
+		src: "https://f003.backblazeb2.com/file/iaubandsite/01.IAU-BATTLE-CRY.mp3",
 		author: "IAU",
 	},
 	{
 		title: "MANA MANA",
-		src: "./mp3-songs/02.IAU-MANA-MANA.wav",
+		src: "https://f003.backblazeb2.com/file/iaubandsite/02.IAU-MANA-MANA.mp3",
 		author: "IAU",
 	},
 	{
-		title: "Whats It To Ya Punk",
-		src: "./mp3-songs/03.IAU-ME-ALONE.wav",
+		title: "Me Alone",
+		src: "https://f003.backblazeb2.com/file/iaubandsite/03.IAU-ME-ALONE.mp3",
 		author: "IAU",
 	},
 ];
