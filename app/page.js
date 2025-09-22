@@ -11,11 +11,12 @@ export default function Home() {
 			<main className="min-h-screen bg-black">
 				<Intro />
 				<About />
+				<PhotoGallery />
 				{/* <Listen />*/}
 				{/* <Shows />*/}
 				<ContactUs />
 				<TextParallax />
-				<PhotoGallery />
+				
 			</main>
 		</>
 	);

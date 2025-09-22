@@ -8,13 +8,15 @@ export default function Footer() {
 			<footer className="w-full">
 				<div className=" py-16">
 					<Container customClasses="flex flex-col lg:items-center lg:flex-row">
-						<div className="basis-2/3 text-white">
-							<h3 className="text-5xl font-bold">Subscribe</h3>
-							<p>To our newsletter to get the latest updates and live gigs info.</p>
-						</div>
-						<div className="flex items-cente w-full mt-2.5 lg:mt-0 lg:basis-1/3 lg:justify-end">
-							<SubscribeForm />
-						</div>
+						    {/* 
+							<div className="basis-2/3 text-white">
+								<h3 className="text-5xl font-bold">Subscribe</h3>
+								<p>To our newsletter to get the latest updates and live gigs info.</p>
+							</div>
+							<div className="flex items-cente w-full mt-2.5 lg:mt-0 lg:basis-1/3 lg:justify-end">
+								<SubscribeForm />
+							</div>
+							*/}
 					</Container>
 				</div>
 				<div className="bg-fluo-green pt-3 relative z-[100]">
