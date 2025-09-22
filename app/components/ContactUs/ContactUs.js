@@ -47,7 +47,7 @@ export default function ContactUs() {
 								target="_blank"
 								rel="noreferrer">
 								{" "}
-								ITSABOUTUS@PM.ME{" "}
+								ITS0ABOUT0US@gmail.com{" "}
 							</a>{" "}
 						</p>
 					</div>
