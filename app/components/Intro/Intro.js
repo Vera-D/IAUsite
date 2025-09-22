@@ -35,7 +35,7 @@ export default function Intro() {
 			id="intro"
 			className={`relative flex flex-col items-center h-[100svh] w-full overflow-hidden max-h-[93rem] min-h-[43rem] lg:h-screen lg:flex-row lg:justify-start`}
 			ref={sectionRef}>
-			<BandIdentity />
+			{/* <BandIdentity /> */}
 			<div className="absolute w-full h-full top-0 left-0">
 				<div className="absolute w-full h-full top-0 left-0 bg-gradient-to-b from-purple-500 to-pink-500 opacity-10"></div>
 				<div className="absolute w-full h-full top-0 left-0 bg-hero-pattern bg-repeat"></div>

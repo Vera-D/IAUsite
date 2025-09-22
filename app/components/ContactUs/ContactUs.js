@@ -16,7 +16,7 @@ export default function ContactUs() {
 			className="relative flex flex-col-reverse items-center w-full mt-16 mx-auto max-w-[150rem] lg:mt-56 lg:flex-row text-fluo-green">
 			<Image
 				className="mt-5 max-h-96 object-cover lg:mt-0 lg:max-h-none lg:max-w-lg lg:block xl:max-w-xl"
-				src="/contacts.jpg"
+				src="/contact.jpg"
 				width={750}
 				height={533}
 				alt="Dancing"
@@ -43,7 +43,7 @@ export default function ContactUs() {
 							Let's become one. <br></br>Email us at{" "}
 							<a
 								className="text-yellow-btn-primary underline underline-offset-4 hover:text-yellow-600"
-								href="https://www.paninopanini.co.uk/"
+								href="https://iau-band.com/"
 								target="_blank"
 								rel="noreferrer">
 								{" "}

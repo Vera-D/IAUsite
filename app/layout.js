@@ -3,7 +3,7 @@ import "./globals.css";
 
 export const metadata = {
 	title: "ITS ABOUT US",
-	description: "LA, HEL, FINLAND, SYNTHWAVE, ROCK, METAL, PUNK, INDIE, DARKWAVE, D.I.Y, HARDCORE, MUSIC, TAMPERE, HELSINKI",
+	description: "LA, HELSINKI, FINLAND, SYNTHWAVE, ROCK, METAL, PUNK, INDIE, DARKWAVE, D.I.Y, HARDCORE, MUSIC, TAMPERE, HELSINKI",
 	verification: {
 		google: "",
 	},
@@ -14,7 +14,7 @@ export default function RootLayout({ children }) {
 		<html lang="en">
 			<body className="font-poppins font-rendering text-2xl xl:text-3xl">
 				{children}
-				{/* <Footer /> */}
+				 <Footer /> 
 			</body>
 		</html>
 	);

@@ -57,30 +57,7 @@ const galleryThumbnails = [
 			{ src: "/gallery/slider-images/slider-12.jpg" },
 		],
 	},
-	{
-		id: 5,
-		src: "/gallery/thumbnails/thumbnail-5.jpg",
-		club: "The Super Cat.",
-		city: "Rome",
-		date: "03/03/2018",
-		slides: [
-			{ src: "/gallery/slider-images/slider-13.jpg" },
-			{ src: "/gallery/slider-images/slider-14.jpg" },
-			{ src: "/gallery/slider-images/slider-15.jpg" },
-		],
-	},
-	{
-		id: 6,
-		src: "/gallery/thumbnails/thumbnail-6.jpg",
-		club: "The Brave Salmon.",
-		city: "Berlin",
-		date: "25/12/2017",
-		slides: [
-			{ src: "/gallery/slider-images/slider-16.jpg" },
-			{ src: "/gallery/slider-images/slider-17.jpg" },
-			{ src: "/gallery/slider-images/slider-18.jpg" },
-		],
-	},
+	
 ];
 
 export default function PhotoGallery() {
@@ -97,7 +74,7 @@ export default function PhotoGallery() {
 	return (
 		<section
 			id="photo-gallery"
-			className={`w-full mt-16 pb-14 lg:mt-56 lg:pb-56 lg:mb-[22.5rem]`}
+			className={`w-full mt-16 pb-14 lg:mt-56 lg:pb-56 lg:mb-[22.5rem] text-purple-500`}
 			style={{
 				transform: isInView ? "none" : "translateY(100px)",
 				opacity: isInView ? 1 : 0,
@@ -113,14 +90,14 @@ export default function PhotoGallery() {
 						Gallery
 					</h2>
 				</div>
-				<p>Past shows.</p>
+				<p>Future shows.</p>
 				<div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-5">
 					{galleryThumbnails.map((item, index) => {
 						return (
 							<div className="flex flex-col mb-5 leading-none" key={item.id}>
-								<div className="w-full h-full rounded-lg bg-fluo-green transition-all">
+								<div className="w-full aspect-square rounded-lg overflow-hidden bg-fluo-green">
 									<Image
-										className="rounded-lg cursor-pointer hover:opacity-60 transition-all"
+										className="w-full h-full object-cover rounded-lg cursor-pointer hover:opacity-60 transition-all"
 										src={item.src}
 										width={400}
 										height={400}

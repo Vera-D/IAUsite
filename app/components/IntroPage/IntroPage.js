@@ -12,7 +12,6 @@ export default function IntroPage() {
                     <h4 className="text-white font-rockSalt text-base">01. Battle Cry!</h4>
                     <h4 className="text-white font-rockSalt text-base">02. Mana Mana</h4>
                     <h4 className="text-white font-rockSalt text-base">03. Alone/Forever/For Good</h4>
-                    
                 </div>
             </div>
         </div>

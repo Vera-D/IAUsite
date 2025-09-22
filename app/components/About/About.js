@@ -12,8 +12,8 @@ export default function About() {
 	return (
 		<section
 			id="about"
-			className={`relative flex flex-col items-center justify-end w-full mt-16 mx-auto max-w-[150rem] lg:flex-row lg:mt-56 bg-black text-fluo-green`}>
-			<Container customClasses="lg:absolute lg:left-1/2 lg:-translate-x-1/2">
+			className="relative flex flex-col lg:flex-row items-center lg:items-start justify-end w-full mt-16 mx-auto max-w-[150rem] lg:mt-56 bg-black text-fluo-green gap-x-12">
+			<Container customClasses="w-full lg:w-auto">
 				<div
 					className="relative flex flex-col lg:max-w-md xl:max-w-2xl 2xl:max-w-4xl pb-60"
 					ref={textRef}
@@ -37,7 +37,7 @@ export default function About() {
 						straight edge, d.i.y. <br />
 					</p>
 					<p className="pb-4">
-						<span className="font-bold">South Central/Los Angeles/CALIFORNIA - Tesoma/Tampere/Finland <br />
+						<span className="font-bold">From South Central/Los Angeles/CALIFORNIA - Tesoma/Tampere/FINLAND <br />
 					 </span> 
 					</p>
 					<p className="italic text-yellow-btn-primary pb-8">
@@ -50,12 +50,12 @@ export default function About() {
 				</div>
 			</Container>
 			<Image
-				className="w-full mt-5 max-h-96 object-cover lg:mt-0 lg:max-h-none lg:max-w-lg lg:block xl:max-w-xl"
-				src="/about.png"
-				width={750}
-				height={533}
+				className="object-cover lg:object-contain max-w-full max-h-[80vh] xl:max-w-4xl"
+				src="/about.jpg"
+				width={1200}
+				height={900}
 				alt="Its About Us band photo"
-				
+				priority
 			/>
 		</section>
 	);
