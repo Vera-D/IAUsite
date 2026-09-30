@@ -11,7 +11,6 @@ export default function IntroPage() {
                 <div className="flex flex-col items-center gap-2 w-full">
                     <h4 className="text-white font-rockSalt text-base">01. Battle Cry!</h4>
                     <h4 className="text-white font-rockSalt text-base">02. Mana Mana</h4>
-                    <h4 className="text-white font-rockSalt text-base">03. Alone/Forever/For Good</h4>
                 </div>
             </div>
         </div>
