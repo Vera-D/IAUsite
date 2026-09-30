@@ -3,7 +3,7 @@ import { Analytics } from "@vercel/analytics/next";
 
 export const metadata = {
     title: "ITS ABOUT US",
-    description: "SyNtH wAvE nOiSe PoP — wreaking havok from LAX to Tampere",
+    description: "SyNtH wAvE nOiSe PoP — wreaking havok from LAX to Tampere. Newborn baby band looking to find its dark tribe.",
     verification: {
         google: "",
     },
