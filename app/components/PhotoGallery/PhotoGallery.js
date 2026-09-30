@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useRef } from "react";
+import { useRef } from "react";
 import { useInView } from "framer-motion";
 import Image from "next/image";
 import Container from "@/app/global-components/Container/Container";
@@ -39,7 +39,8 @@ export default function PhotoGallery() {
     return (
         <section
             id="photo-gallery"
-            className="w-full mt-16 pb-14 lg:mt-56 lg:pb-56 lg:mb-[22.5rem] text-purple-500"
+            aria-label="Band Photo Gallery"
+            className="w-full pb-10 lg:pb-24 text-purple-500"
             style={{
                 transform: isInView ? "none" : "translateY(100px)",
                 opacity: isInView ? 1 : 0,
@@ -48,18 +49,12 @@ export default function PhotoGallery() {
             ref={sectionRef}
         >
             <Container>
-                <div className="overflow-hidden">
-                    <h2
-                        className={`font-bold text-6xl pb-6 translate-y-24 ${
-                            isInView ? "animate-slideUp" : ""
-                        }`}>
-                        Gallery
-                    </h2>
-                </div>
-                <p>What we have been up to, band moments.</p>
-                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-5">
+                <h2 className={`font-bold text-4xl md:text-6xl pb-4 ${isInView ? "animate-slideUp" : ""}`}>
+                    SyNtH wAvE nOiSe PoP
+                </h2>
+                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
                     {galleryThumbnails.map((item) => (
-                        <div className="flex flex-col mb-5 leading-none" key={item.id}>
+                        <figure className="flex flex-col mb-4" key={item.id}>
                             <div className="w-full aspect-square rounded-lg overflow-hidden bg-fluo-green">
                                 <Image
                                     className="w-full h-full object-cover rounded-lg"
@@ -69,9 +64,7 @@ export default function PhotoGallery() {
                                     alt={item.title}
                                 />
                             </div>
-                            <h5 className="text-sm md:text-lg xl:text-xl font-medium mt-2">{item.title}</h5>
-                            <p className="text-xs md:text-sm text-purple-300">{item.description}</p>
-                        </div>
+                        </figure>
                     ))}
                 </div>
             </Container>

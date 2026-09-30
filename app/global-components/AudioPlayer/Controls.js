@@ -9,12 +9,11 @@ export default function Controls({ audioRef, progressBarRef, duration, setTimePr
 	};
 
 	const repeat = useCallback(() => {
+		if (!audioRef.current) return; // Prevent error if ref is not set
 		const currentTime = audioRef.current.currentTime;
 		setTimeProgress(currentTime);
 		progressBarRef.current.value = currentTime;
-
-		playAnimationRef.current = requestAnimationFrame(repeat);
-	}, [audioRef, duration, progressBarRef, setTimeProgress]);
+	}, [audioRef, setTimeProgress, progressBarRef]);
 
 	const handlePrevious = () => {
 		if (trackIndex === 0) {

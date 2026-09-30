@@ -9,9 +9,11 @@ export default function Home() {
 	return (
 		<>
 			<main className="min-h-screen bg-black">
+				<TextParallax />
+				<PhotoGallery />
 				<Intro />
 				<About />
-				<PhotoGallery />
+				
 				{/* <Listen />*/}
 				{/* <Shows />*/}
 				<ContactUs />
