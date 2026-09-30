@@ -3,7 +3,7 @@ import { Analytics } from "@vercel/analytics/next";
 
 export const metadata = {
     title: "ITS ABOUT US",
-    description: "LA, Helsinki, Finland, synthwave, rock, synthcore, punk, indie, darkwave, D.I.Y, hardcore, music, Tampere, Helsinki",
+    description: "SyNtH wAvE nOiSe PoP — wreaking havok from LAX to Tampere",
     verification: {
         google: "",
     },
