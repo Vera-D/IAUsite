@@ -25,7 +25,7 @@ export default function VideoSection() {
 						controls
 						preload="metadata"
 						className="w-full rounded-lg"
-						poster="/frame-band.jpg">
+						poster="/promo-thumb.jpg">
 						<source src="https://f003.backblazeb2.com/file/iaubandsite/IAU-promo-live.mp4" type="video/mp4" />
 					</video>
 				</div>
