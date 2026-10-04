@@ -1,25 +1,22 @@
-import { useState, useEffect, useRef, useCallback } from "react";
+import { useEffect, useRef, useCallback } from "react";
 import { PreviousSong, NextSong, Play, Pause } from "@/app/svg-icons/svg-icons";
-export default function Controls({ audioRef, progressBarRef, duration, setTimeProgress, tracks, trackIndex, setTrackIndex, setCurrentTrack, handleNext }) {
-	const [isPlaying, setIsPlaying] = useState(false);
+
+export default function Controls({ audioRef, progressBarRef, duration, setTimeProgress, tracks, trackIndex, setTrackIndex, setCurrentTrack, handleNext, isPlaying, setIsPlaying }) {
 	const playAnimationRef = useRef();
 
-	const togglePlayPause = () => {
-		setIsPlaying((prev) => !prev);
-	};
-
 	const repeat = useCallback(() => {
-		if (!audioRef.current) return; // Prevent error if ref is not set
-		const currentTime = audioRef.current.currentTime;
-		setTimeProgress(currentTime);
-		progressBarRef.current.value = currentTime;
+		if (!audioRef.current) return;
+		setTimeProgress(audioRef.current.currentTime);
+		if (progressBarRef.current) {
+			progressBarRef.current.value = audioRef.current.currentTime;
+		}
+		playAnimationRef.current = requestAnimationFrame(repeat);
 	}, [audioRef, setTimeProgress, progressBarRef]);
 
 	const handlePrevious = () => {
 		if (trackIndex === 0) {
-			let lastTrackIndex = tracks.length - 1;
-			setTrackIndex(lastTrackIndex);
-			setCurrentTrack(tracks[lastTrackIndex]);
+			setTrackIndex(tracks.length - 1);
+			setCurrentTrack(tracks[tracks.length - 1]);
 		} else {
 			setTrackIndex((prev) => prev - 1);
 			setCurrentTrack(tracks[trackIndex - 1]);
@@ -27,26 +24,22 @@ export default function Controls({ audioRef, progressBarRef, duration, setTimePr
 	};
 
 	useEffect(() => {
+		if (!audioRef.current) return;
 		if (isPlaying) {
 			audioRef.current.play();
+			playAnimationRef.current = requestAnimationFrame(repeat);
 		} else {
 			audioRef.current.pause();
+			cancelAnimationFrame(playAnimationRef.current);
 		}
-		playAnimationRef.current = requestAnimationFrame(repeat);
+		return () => cancelAnimationFrame(playAnimationRef.current);
 	}, [isPlaying, audioRef, repeat]);
 
 	return (
 		<div className="flex items-center pt-8 pb-4 gap-8">
-			<button onClick={togglePlayPause} className="bg-fluo-green hover:bg-yellow-btn-primary transition-all rounded-full p-3 shadow-lg animate-bounce">
+			<button onClick={() => setIsPlaying((prev) => !prev)} className="bg-fluo-green hover:bg-yellow-btn-primary transition-all rounded-full p-3 shadow-lg animate-bounce">
 				{isPlaying ? <Pause extraClasses="fill-yellow-btn-primary w-8 h-8" /> : <Play extraClasses="fill-yellow-btn-primary w-8 h-8" />}
 			</button>
-			{/* <button
-				className="ml-auto bg-fluo-green hover:bg-white transition-all rounded-full p-2 shadow-lg flex items-center gap-2"
-				onClick={() => setLikeCount(likeCount + 1)}
-			>
-				<HeartOutline extraClasses="fill-yellow-btn-primary w-6 h-6" />
-				<span className="text-yellow-btn-primary font-bold text-lg select-none">{likeCount}</span>
-			</button> */}
 			<button onClick={handlePrevious} className="px-3">
 				<PreviousSong extraClasses="fill-fluo-green hover:fill-white transition-all" />
 			</button>

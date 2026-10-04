@@ -14,6 +14,7 @@ export default function AudioPlayer() {
 	const [currentTrack, setCurrentTrack] = useState(tracks[trackIndex]);
 	const [timeProgress, setTimeProgress] = useState(0);
 	const [duration, setDuration] = useState(0);
+	const [isPlaying, setIsPlaying] = useState(false);
 	const audioRef = useRef();
 	const progressBarRef = useRef();
 
@@ -35,8 +36,8 @@ export default function AudioPlayer() {
                     It's About Us!
                 </ButtonPrimary>
             </ScrollTo>
-            <Controls audioRef={audioRef} progressBarRef={progressBarRef} setTimeProgress={setTimeProgress} duration={duration} tracks={tracks} trackIndex={trackIndex} setTrackIndex={setTrackIndex} setCurrentTrack={setCurrentTrack} handleNext={handleNext} />
-            <DisplayTrack currentTrack={currentTrack} audioRef={audioRef} progressBarRef={progressBarRef} setDuration={setDuration} handleNext={handleNext} trackIndex={trackIndex} />
+            <Controls audioRef={audioRef} progressBarRef={progressBarRef} setTimeProgress={setTimeProgress} duration={duration} tracks={tracks} trackIndex={trackIndex} setTrackIndex={setTrackIndex} setCurrentTrack={setCurrentTrack} handleNext={handleNext} isPlaying={isPlaying} setIsPlaying={setIsPlaying} />
+            <DisplayTrack currentTrack={currentTrack} audioRef={audioRef} progressBarRef={progressBarRef} setDuration={setDuration} handleNext={handleNext} trackIndex={trackIndex} isPlaying={isPlaying} />
             <ProgressBar progressBarRef={progressBarRef} audioRef={audioRef} timeProgress={timeProgress} duration={duration} />
         </div>
     );
