@@ -5,12 +5,14 @@ import About from "./components/About/About";
 import ContactUs from "./components/ContactUs/ContactUs";
 import PhotoGallery from "./components/PhotoGallery/PhotoGallery";
 import TextParallax from "./components/TextParallax/TextParallax";
+import VideoSection from "./components/VideoSection/VideoSection";
 export default function Home() {
 	return (
 		<>
 			<main className="min-h-screen bg-black">
 				<TextParallax />
 				<PhotoGallery />
+				<VideoSection />
 				<Intro />
 				<About />
 				
