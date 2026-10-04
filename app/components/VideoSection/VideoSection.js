@@ -19,7 +19,6 @@ export default function VideoSection() {
 			}}
 			ref={sectionRef}>
 			<Container>
-				<h2 className="font-bold text-4xl md:text-6xl pb-6">Live</h2>
 				<div className="w-full">
 					<video
 						controls
