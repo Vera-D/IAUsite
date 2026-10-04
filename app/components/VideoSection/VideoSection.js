@@ -20,12 +20,13 @@ export default function VideoSection() {
 			ref={sectionRef}>
 			<Container>
 				<h2 className="font-bold text-4xl md:text-6xl pb-6">Live</h2>
-				<div className="w-full rounded-lg overflow-hidden">
+				<div className="w-full">
 					<video
 						controls
 						preload="metadata"
 						className="w-full rounded-lg"
-						poster="/promo-thumb.jpg">
+						poster="/promo-thumb.jpg"
+						style={{ display: "block" }}>
 						<source src="https://f003.backblazeb2.com/file/iaubandsite/IAU-promo-live.mp4" type="video/mp4" />
 					</video>
 				</div>
